@@ -19,7 +19,11 @@
 
 </head>
 <body>
-<h2 class="blue-300">Formulario de contacto</h2>
+
+
+
+
+<h2 class="text-primary">Formulario de contacto</h2>
 			<form action=""  name="form" id="form" class="form-inline" role="form"     method= "POST"  > 
         <div class="form-group row">
         <input type="text" class="form-control" placeholder="Ingrese nombre"  
@@ -34,13 +38,21 @@
         aria-describedby="Email" id="email" name="email" required
         value="" />
         </div>
-        <button type="submit" class="btn btn-primary  mb-3 p-2 col ">
+        <button  class="btn btn-primary  mb-3 p-2 col ">
           Enviar Consulta
         </button>
     </form>
 
 
+    <div class="toast position-relativetop-0 start-0" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
    
+    <strong class="me-auto">Formulario</strong>    
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">
+  </div>
+</div>
 
     
 
