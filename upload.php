@@ -19,7 +19,7 @@
     $(document).ready(function() {
       $('#image-upload-form').submit(function(event) {
         event.preventDefault(); // Prevent default form submission
-
+      });
         const formData = new FormData(this);
 
         $.ajax({
@@ -52,7 +52,7 @@
             console.error('Error:', textStatus, errorThrown);
           }
         });
-      });
+     
     });
   </script>
 </body>
