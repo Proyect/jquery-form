@@ -9,42 +9,87 @@
     <link rel="stylesheet" href= "./media/css/styles.css" type="text/css" media="screen" /> 
 </head>
 <body>
-<h2>Registration Form</h2>
-  <form id="registration-form">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    <button type="submit">Register</button>
-  </form>
-
+<div  class="contaner">
+  
+<button type="button" class="btn btn-primary btn-outline-light fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+<i class="bi-alarm"></i>
   <h2>Registered Users</h2>
-  <table id="data" class="table table-striped">
+  <table id="data" class="table table-striped w-100">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Actions</th>
-        <th>OP</th>
+          <th>Name</th>
+          <th>Last Name</th>
+          <th>Tel</th>
+          <th>Email</th>
+          <th>OP</th>
       </tr>
     </thead>
     <tfoot>
-            <tr>
+           <tr>
                <th>Name</th>
+              <th>Last Name</th>
+              <th>Tel</th>
               <th>Email</th>
-              <th>Actions</th>
               <th>OP</th>
-            </tr>
-        </tfoot>
-    <tbody>
-      <tr>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-      </tr>
+         </tr>
+      </tfoot>
+    <tbody>      
     </tbody>
   </table>
+  </div>  
+
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ingrese los datos</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      
+      <h2>Registration Form</h2>
+  <form id="registration-form" class="form">
+    <div class="row">
+    <div class="col">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" class="form-control w50" required>
+    </div>
+    <div class="col">
+      <label for="name">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" class="form-control w50" required>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" class="form-control" required>
+      </div>
+      <div class="col">
+        <label for="tel">Tel:</label>
+        <input type="tel" id="tel" name="tel" class="form-control" required>        
+      </div>
+     
+    </div>
+    <div class="row">
+       <div class="col text-cente">
+        <button  class="btn btn-primary btn-outline-light fw-bold" id="updateData">
+          Register
+        </button>
+      </div>
+    </div>      
+  </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-x"></i> Close</button>        
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- Librería jQuery requerida por los plugins de JavaScript -->  
   	
@@ -58,9 +103,8 @@
     <script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
     <script src="https://cdn.datatables.net/2.0.7/js/dataTables.bootstrap5.js"></script>
     <script>
-      $(document).ready(function() {
-        new DataTable('#data');
-      }
+      
+
     </script>
 </body>
 </html>
