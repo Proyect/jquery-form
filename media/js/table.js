@@ -8,7 +8,8 @@ $(document).ready(function() {
                         '<td>' + item.last_name + '</td>' +
                         '<td>' + item.Phone + '</td>' +
                         '<td>' + item.Email+ '</td>' +
-                        '<td>' + item.id + '</td>' +
+                        '<td>  <img src="./media/img/pencil.svg" Title="Edit" name="edt">' 
+                        + item.id + ' <i class="bi bi-x-square" name="Del"></i> </td>' +
                         '</tr>';
             console.log(row);
             $('tbody').append(row);         
@@ -19,3 +20,5 @@ $(document).ready(function() {
         
       })
 });
+
+$("#edit")

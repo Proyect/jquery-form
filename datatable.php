@@ -6,15 +6,17 @@
     <title>Data Table  Example</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">	
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.7/css/dataTables.bootstrap5.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href= "./media/css/styles.css" type="text/css" media="screen" /> 
 </head>
 <body>
 <div  class="contaner">
-  
-<button type="button" class="btn btn-primary btn-outline-light fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
-<i class="bi-alarm"></i>
+  <div class="text-rigth"> 
+    <button type="button" class="btn btn-primary btn-outline-light fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <i class="bi bi-plus-circle"></i> Registrer
+    </button>
+  </div> 
+
   <h2>Registered Users</h2>
   <table id="data" class="table table-striped w-100">
     <thead>
@@ -27,69 +29,93 @@
       </tr>
     </thead>
     <tfoot>
-           <tr>
-               <th>Name</th>
-              <th>Last Name</th>
-              <th>Tel</th>
-              <th>Email</th>
-              <th>OP</th>
-         </tr>
+      <tr>
+          <th>Name</th>
+        <th>Last Name</th>
+        <th>Tel</th>
+        <th>Email</th>
+        <th>OP</th>
+    </tr>
       </tfoot>
-    <tbody>      
+     <tbody>      
     </tbody>
   </table>
   </div>  
 
-  <!-- Modal -->
+  <!-- Modal New and edit-->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ingrese los datos</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Add New Data</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
       
       <h2>Registration Form</h2>
-  <form id="registration-form" class="form">
-    <div class="row">
-    <div class="col">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" class="form-control w50" required>
-    </div>
-    <div class="col">
-      <label for="name">Last Name:</label>
-      <input type="text" id="lastName" name="lastName" class="form-control w50" required>
-    </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" class="form-control" required>
-      </div>
-      <div class="col">
-        <label for="tel">Tel:</label>
-        <input type="tel" id="tel" name="tel" class="form-control" required>        
-      </div>
-     
-    </div>
-    <div class="row">
-       <div class="col text-cente">
-        <button  class="btn btn-primary btn-outline-light fw-bold" id="updateData">
-          Register
-        </button>
-      </div>
-    </div>      
-  </form>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-x"></i> Close</button>        
-      </div>
+        <form id="registration-form" class="form">
+          <div class="row">
+          <div class="col">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" class="form-control w50" required>
+          </div>
+          <div class="col">
+            <label for="name">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" class="form-control w50" required>
+          </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="col">
+              <label for="tel">Tel:</label>
+              <input type="tel" id="tel" name="tel" class="form-control" required>        
+            </div>
+          
+          </div>
+          <hr/>
+          <div class="row">
+            <div class="col text-center">
+              <button  class="btn btn-primary btn-outline-light fw-bold" id="updateData">
+              <i class="bi bi-pencil-fill" title="Edit" name="edt"></i> Register
+              </button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                <i class="bi bi-x-square"></i></i> Close
+              </button> 
+            </div>
+          </div>      
+        </form>
+          
+      </div>    
     </div>
   </div>
 </div>
 
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal Are you Segure?-->
+<div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Alert</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      Are you sure to delete the datas?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Librería jQuery requerida por los plugins de JavaScript -->  
   	
