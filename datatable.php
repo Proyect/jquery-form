@@ -12,8 +12,9 @@
 <body>
 <div  class="contaner">
   <div class="text-rigth"> 
-    <button type="button" class="btn btn-primary btn-outline-light fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    <i class="bi bi-plus-circle"></i> Registrer
+    <button type="button" class="btn btn-primary btn-outline-light fw-bold"  data-bs-toggle="modal" 
+      data-bs-target="#modal_data">
+      <i class="bi bi-plus-circle"></i> Registrer
     </button>
   </div> 
 
@@ -43,7 +44,7 @@
   </div>  
 
   <!-- Modal New and edit-->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal_data" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -55,6 +56,10 @@
       <h2>Registration Form</h2>
         <form id="registration-form" class="form">
           <div class="row">
+          <div class="col">
+              <label for="name">ID:</label>
+              <input type="text" id="id" name="id" class="form-control w50" required>
+          </div>  
           <div class="col">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" class="form-control w50" required>
@@ -94,24 +99,24 @@
 </div>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDelete">
   Launch demo modal
 </button>
 
 <!-- Modal Are you Segure?-->
-<div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Alert</h1>
+        <h1 class="modal-title fs-5" id="idAlert">Alert</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
       Are you sure to delete the datas?
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-danger btn-outline-light">Save</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>        
       </div>
     </div>
   </div>
@@ -122,12 +127,13 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./media/js/table.js"></script>
+   
     
     <!-- Data Tables -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
-    <script src="https://cdn.datatables.net/2.0.7/js/dataTables.bootstrap5.js"></script>
+    <script src="https://cdn.datatables.net/2.0.7/js/dataTables.bootstrap5.js"></script> 
+    <script src="./media/js/table.js"></script>
     <script>
       
 
