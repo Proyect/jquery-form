@@ -28,15 +28,17 @@
   function FormEdit(){
     console.log("Show Edit Form");
     //Edit   
-    let item = $('[Title="Edit"]').data();
-    console.log(item);    
-      console.log(item.firstName);
-      $("#modal_data #name").val(item.firstName) ;
-      console.log(item.last_name);
-      $("#modal_data #lastName").val(item.last_name) ;
-      console.log(item.last_name);
-      $("#modal_data #lastName").val(item.last_name) ;
-      $("#modal_data").modal('show');  
+    $('[name="edt"]').on('click', function(){
+      let item = $(this).data();
+      console.log(item);
+      $("#modal_data #id").val(item.id);      
+      $("#modal_data #name").val(item.firstName); 
+      $("#modal_data #email").val(item.email);       
+      $("#modal_data #lastName").val(item.last_name);
+          
+    }); 
+     
+     $("#modal_data").modal('show');   
   };    
   
       $(document).ready(function(){        
