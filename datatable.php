@@ -55,6 +55,7 @@
       
       <h2>Registration Form</h2>
         <form id="registration-form" class="form">
+          @csrf 
           <div class="row">
           <div class="col">
               <label for="name">ID:</label>
@@ -86,7 +87,7 @@
               <button  class="btn btn-primary btn-outline-light fw-bold" id="updateData">
               <i class="bi bi-pencil-fill" title="Edit" name="edt"></i> Register
               </button>
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="send_data">
                 <i class="bi bi-x-square"></i></i> Close
               </button> 
             </div>
@@ -98,10 +99,6 @@
   </div>
 </div>
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDelete">
-  Launch demo modal
-</button>
 
 <!-- Modal Are you Segure?-->
 <div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="" aria-hidden="true">
@@ -115,8 +112,12 @@
       Are you sure to delete the datas?
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger btn-outline-light">Save</button>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>        
+        <form action="">
+          @csrf
+          <input type="hidden" name="id" id="id" value="0">
+          <button type="button" class="btn btn-danger btn-outline-light">Save</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>  
+         </form>      
       </div>
     </div>
   </div>

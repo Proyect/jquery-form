@@ -34,12 +34,25 @@
       $("#modal_data #id").val(item.id);      
       $("#modal_data #name").val(item.firstName); 
       $("#modal_data #email").val(item.email);       
-      $("#modal_data #lastName").val(item.last_name);
-          
+      $("#modal_data #lastName").val(item.lastName);
+      $("#modal_data #tel").val(item.Phone);    
     }); 
      
      $("#modal_data").modal('show');   
-  };    
+  };
+  
+  //send datas
+  $("#send_data").submit(function (event) {
+    event.preventDefault();
+    let data = {
+      id:$("#modal_data #id").val(),      
+      name:$("#modal_data #name").val(), 
+      $("#modal_data #lastName").val(item.lastName);
+      $("#modal_data #email").val(item.email);       
+      
+      $("#modal_data #tel").val(item.Phone); 
+    }
+  });  
   
       $(document).ready(function(){        
        // FormEdit();    
