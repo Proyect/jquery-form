@@ -25,7 +25,7 @@
 
 
 <h2 class="text-primary">Formulario de contacto</h2>
-			<form action=""  name="form" id="form" class="form-inline" role="form"     method= "POST"  > 
+			<form name="form" id="form" class="form-inline" role="form"     method= "POST" action="sendData.php" > 
         <div class="form-group row">
         <input type="text" class="form-control" placeholder="Ingrese nombre"  
             aria-describedby="Nombre" id="nombre" name="nombre" required

@@ -54,7 +54,7 @@
       <div class="modal-body">
       
       <h2>Registration Form</h2>
-        <form id="registration-form" class="form">
+        <form id="registration-form" class="form" method= "POST" action="sendData.php">
           @csrf 
           <div class="row">
           <div class="col">
@@ -112,7 +112,7 @@
       Are you sure to delete the datas?
       </div>
       <div class="modal-footer">
-        <form action="">
+        <form action="sendData.php">
           @csrf
           <input type="hidden" name="id" id="id" value="0">
           <button type="button" class="btn btn-danger btn-outline-light">Save</button>
