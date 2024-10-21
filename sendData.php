@@ -1,15 +1,19 @@
 <?php
 // Verificar si se ha enviado el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {   
-    $nombre = $_POST["nombre"];
-    $apellido = $_POST["apellido"];
+    $id = $_POST["id"];
+    $nombre = $_POST["name"];
+    $apellido = $_POST["lastName"];
     $email = $_POST["email"];
+    $tel = $_POST["tel"];
 
     // Crear un arreglo asociativo con los datos recibidos
     $datos = array(
+        "id" => $id,
         "nombre" => $nombre,
         "email" => $email,
         "apellido" => $apellido,
+        "tel" => $tel,
         "proceess" =>  "success"
     );
 

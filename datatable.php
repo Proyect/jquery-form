@@ -112,16 +112,34 @@
       Are you sure to delete the datas?
       </div>
       <div class="modal-footer">
-        <form action="sendData.php">
+        <form action="sendData.php" id="delete-form" method= "POST" action="sendData.php">
           @csrf
           <input type="hidden" name="id" id="id" value="0">
-          <button type="button" class="btn btn-danger btn-outline-light">Save</button>
+          <button type="button" class="btn btn-danger btn-outline-light">Delete</button>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>  
          </form>      
       </div>
     </div>
   </div>
 </div>
+
+<!--Notifications -->
+  <div class="modal" id="toast" tabindex="-1" aria-labelledby="toastLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-primary bg-gradient text-white">
+          <h5 class="modal-title" id="toastLabel">Notificaciones</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="body_toast">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-outline-light fw-bold" data-bs-dismiss="modal">Close</button>          
+        </div>
+      </div>
+    </div>
+  </div>
 
 <!-- Librería jQuery requerida por los plugins de JavaScript -->  
   	
