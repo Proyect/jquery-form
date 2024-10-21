@@ -84,7 +84,7 @@
           <hr/>
           <div class="row">
             <div class="col text-center">
-              <button  class="btn btn-primary btn-outline-light fw-bold" id="updateData">
+              <button  class="btn btn-primary btn-outline-light fw-bold" id="updateData" >
               <i class="bi bi-pencil-fill" title="Edit" name="edt"></i> Register
               </button>
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="send_data">
@@ -115,7 +115,7 @@
         <form action="sendData.php" id="delete-form" method= "POST" action="sendData.php">
           @csrf
           <input type="hidden" name="id" id="id" value="0">
-          <button type="button" class="btn btn-danger btn-outline-light">Delete</button>
+          <button type="button" class="btn btn-danger btn-outline-light" type="submit">Delete</button>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>  
          </form>      
       </div>

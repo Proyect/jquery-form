@@ -83,7 +83,7 @@
   });  
   
   $("#delete-form").submit(function (event) {
-    alert("Hello word");
+    
     event.preventDefault();
     var form = $(this).serialize();
     console.log("delete form");
